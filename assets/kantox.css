@@ -1,0 +1,17 @@
+.n, .p { border: none; box-shadow: none; }
+
+nav, footer.page-footer { background-color: #01a8df; }
+
+#postsContent { font-size: 1.3em; }
+pre { font-size: 0.87em; }
+code { font-size: 0.87em; }
+
+span.code {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #01a8df;
+  font-weight: bold;
+}
+
+.gallery-header > span { font-weight: 700; font-size: 1.2em; } /* title */
+.gallery-header > p { font-weight: 200; font-size: 0.7em; }    /* date */
