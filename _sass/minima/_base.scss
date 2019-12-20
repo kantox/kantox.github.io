@@ -181,7 +181,6 @@ pre {
   margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
-  @extend %clearfix;
 
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
@@ -189,20 +188,15 @@ pre {
     padding-right: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
   }
+
+  &.navbar {
+    max-width: 100%;
+    padding: 0 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 }
-
-
-
-/**
- * Clearfix
- */
-%clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
 
 /**
  * Icons
@@ -220,6 +214,19 @@ pre {
 .social-media-list {
   li + li {
     padding-top: 5px;
+  }
+
+  li a {
+    span {
+      color: $secondary-text-color;
+    }
+
+    .svg-icon{
+      background: $background-color;
+      padding: 5px;
+      border-radius: 15%;
+      margin-right: 5px;
+    }
   }
 }
 

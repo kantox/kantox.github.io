@@ -2,7 +2,6 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
@@ -24,11 +23,13 @@
   }
 }
 
-.site-title > img { height: 48px; }
+.site-title .logo { 
+  width: 133px;
+  margin: 34px 0 31px;
+}
 
 .site-nav {
-  float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  margin-bottom: 30px;
 
   .nav-trigger {
       display: none;
@@ -41,6 +42,17 @@
   .page-link {
     color: $text-color;
     line-height: $base-line-height;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding-bottom: 5px;
+    border-radius: 40px;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+
+    &:hover {
+      border: 2px solid #e8e8e8;
+    }
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -59,7 +71,6 @@
 
     label[for="nav-trigger"] {
       display: block;
-      float: right;
       width: 36px;
       height: 36px;
       z-index: 2;
@@ -68,7 +79,6 @@
 
     .menu-icon {
       display: block;
-      float: right;
       width: 36px;
       height: 26px;
       line-height: 0;
@@ -108,6 +118,7 @@
  * Site footer
  */
 .site-footer {
+  background: $secondary-background-color;
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
 }
@@ -115,19 +126,25 @@
 .footer-heading {
   @include relative-font-size(1.125);
   margin-bottom: $spacing-unit / 2;
+  color: $secondary-text-color;
+  font-size: 20px;
 }
 
 .contact-list,
 .social-media-list {
+  color: $background-color;
   list-style: none;
   margin-left: 0;
+
+  .link {
+    color: $secondary-text-color;
+  }
 }
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
   color: $grey-color;
   margin-left: -$spacing-unit / 2;
-  @extend %clearfix;
 }
 
 .footer-col {
@@ -178,8 +195,32 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
   flex: 1;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 530px;
+  color: $background-color;
+  margin-bottom: $spacing-unit;
+
+  .title {
+    font-size: 64px;
+    font-weight: 900;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  &.blog {
+    background: rgba(0, 0, 0, .65) url('https://picsum.photos/1920/1080') no-repeat center center fixed; 
+    background-blend-mode: darken;
+    background-size: cover;
+  }
 }
 
 .page-heading {

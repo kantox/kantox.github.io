@@ -1,7 +1,5 @@
 .n, .p { border: none; box-shadow: none; }
 
-nav, footer.page-footer { background-color: #01a8df; }
-
 #postsContent { font-size: 1.3em; }
 pre { font-size: 0.87em; }
 code { font-size: 0.87em; }
@@ -157,14 +155,14 @@ table td { border: 1px solid #e8e8e8; }
 
 .post-list { margin-left: 0; list-style: none; }
 
-.post-list > li { margin-bottom: 30px; }
+.post-list > li { margin-bottom: 20px; }
 
 .post-meta { font-size: 14px; color: #828282; }
 
-.post-link { display: block; font-size: 24px; }
+.post-link { display: block; font-size: 26px; }
 
 /** Posts */
-.post-header { margin-bottom: 30px; }
+.post-header { margin-bottom: 20px; }
 
 .post-title { font-size: 42px; letter-spacing: -1px; line-height: 1; }
 
