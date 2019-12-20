@@ -2,13 +2,11 @@
  * Reset basic elements
  */
 body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
+p, blockquote, pre, hr, article,
 dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
 }
-
-
 
 /**
  * Basic styling
@@ -41,14 +39,23 @@ ul, ol, dl, figure,
 }
 
 
+/**
+ * `article` element
+ */
+article {
+  max-width: 1000px;
+  margin: 42px auto 0 auto;
+}
+
 
 /**
  * `main` element
  */
 main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  justify-content: center;
+  align-items: center;
 }
-
 
 
 /**
