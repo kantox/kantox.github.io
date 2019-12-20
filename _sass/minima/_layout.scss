@@ -30,6 +30,7 @@
 
 .site-nav {
   margin-bottom: 30px;
+  text-align: right;
 
   .nav-trigger {
       display: none;
@@ -53,14 +54,9 @@
     &:hover {
       border: 2px solid #e8e8e8;
     }
-
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
   }
 
-  @include media-query($on-palm) {
+  @include media-query($on-laptop) {
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
@@ -75,6 +71,7 @@
       height: 36px;
       z-index: 2;
       cursor: pointer;
+      margin-left: auto;
     }
 
     .menu-icon {
@@ -210,10 +207,17 @@
   .title {
     font-size: 64px;
     font-weight: 900;
+    text-align: center;
+    padding: 0 15px;
+
+    @include media-query($on-palm) {
+      font-size: 42px;
+    }
   }
 
   .description {
     font-size: 18px;
+    text-align: center;
   }
 
   &.blog {
@@ -255,6 +259,11 @@
 /**
  * Posts
  */
+
+.post {
+  padding: 0 20px;
+}
+
 .post-header {
   margin-bottom: $spacing-unit;
 }

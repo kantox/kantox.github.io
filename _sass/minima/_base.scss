@@ -202,6 +202,16 @@ pre {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+
+    @include media-query($content-width) {
+      padding: 0 30px;
+    }
+  }
+  
+  &.footer {
+    @include media-query($on-laptop) {
+      text-align: center;
+    }
   }
 }
 

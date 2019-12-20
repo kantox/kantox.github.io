@@ -179,6 +179,16 @@ pre > code {
   align-items: flex-end;
   justify-content: space-between;
 }
+@media screen and (max-width: 1000px) {
+  .wrapper.navbar {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .wrapper.footer {
+    text-align: center;
+  }
+}
 
 /**
  * Icons
@@ -259,6 +269,7 @@ table td {
 
 .site-nav {
   margin-bottom: 30px;
+  text-align: right;
 }
 .site-nav .nav-trigger {
   display: none;
@@ -280,10 +291,7 @@ table td {
 .site-nav .page-link:hover {
   border: 2px solid #e8e8e8;
 }
-.site-nav .page-link:not(:last-child) {
-  margin-right: 20px;
-}
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .site-nav {
     position: absolute;
     top: 9px;
@@ -299,6 +307,7 @@ table td {
     height: 36px;
     z-index: 2;
     cursor: pointer;
+    margin-left: auto;
   }
   .site-nav .menu-icon {
     display: block;
@@ -421,9 +430,17 @@ table td {
 .hero-container .title {
   font-size: 64px;
   font-weight: 900;
+  text-align: center;
+  padding: 0 15px;
+}
+@media screen and (max-width: 600px) {
+  .hero-container .title {
+    font-size: 42px;
+  }
 }
 .hero-container .description {
   font-size: 18px;
+  text-align: center;
 }
 .hero-container.blog {
   background: rgba(0, 0, 0, 0.65) url("https://picsum.photos/1920/1080") no-repeat center center fixed;
@@ -460,6 +477,10 @@ table td {
 /**
  * Posts
  */
+.post {
+  padding: 0 20px;
+}
+
 .post-header {
   margin-bottom: 30px;
 }
