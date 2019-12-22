@@ -8,6 +8,8 @@ tags:
   - erlang
 ---
 
+![Sunrise in Torre Mapfre](/img/sunrise-titanic.jpg)
+
 _OTP_ stands for _Open Telecom Platform_. It is a historical quirk; _Ericsson_ was a culpritin initiating the development of fault-tolerant software platform, hence _Telecom_. It turned out, _OTP_ as we know it has nothing to do with _Telecom_. Nowadays the title has the same connotations with its functionality, as apples are related to medium quality phones.
 
 The main distinguishing feature of the OTP according to the authors, is fault tolerance. Not multithreading, not the actor model, not the rich pattern matching, even not transparent clustering and not hot code upgrades. Fault tolerance.
