@@ -16,8 +16,8 @@ The main distinguishing feature of the OTP according to the authors, is fault to
 
 The virtual machine of erlang on the surface is very simple: there are a bunch of _“processes”_ (not system processes, erlang processes) with isolated memory, that can exchange messages. That’s it. As Joe Armstrong had written once:
 
-In my blog I argued that processes should behave pretty much like people. People have private memories and exchange data by message passing.
-— [Why I don't like shared memory](http://armstrongonsoftware.blogspot.com/2006/09/why-i-dont-like-shared-memory.html)
+> In my blog I argued that processes should behave pretty much like people. People have private memories and exchange data by message passing.  
+> — [Why I don't like shared memory](http://armstrongonsoftware.blogspot.com/2006/09/why-i-dont-like-shared-memory.html)
 
 The exchange of messages within _OTP_ is deadly simple. One process sends a message to another process (or to a group of other processes,) synchronously, or asynchronously. Note, that it is necessary to know who is to receive these messages. That is, the _manager_ of the exchange is the sender. But what if we wanted to send broadcast and to provide an opportunity to all interested processes to subscribe to this message?
 
