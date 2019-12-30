@@ -231,7 +231,7 @@ iex> Iteraptor.jsonify([foo: [bar: [baz: :zoo], boo: 42]], values: true)
 %{"foo" => %{"bar" => %{"baz" => "zoo"}, "boo" => 42}}
 ```
 
-**`Iteraptor.Extras.bury/(term, key, value, opts)`** — puts the value under the deeply nested key, creating all the intermediate terms if needed.
+**`Iteraptor.Extras.bury(term, key, value, opts)`** — puts the value under the deeply nested key, creating all the intermediate terms if needed.
 
 - _term_: term to bury the value into
 - _key_: key to bury the value under
