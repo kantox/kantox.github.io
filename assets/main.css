@@ -27,6 +27,16 @@ body {
 }
 
 /**
+ * Horizontal rule
+ */
+hr {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  margin: 0.4em 0 1em 0;
+}
+
+/**
  * Set `margin-bottom` to maintain vertical rhythm
  */
 h1, h2, h3, h4, h5, h6,
