@@ -14,10 +14,10 @@ While _OTP_ provides the whole infrastructure to deliver logging events to subsc
 
 > `Logger` supports different backends where log messages are written to.
 >
-> The available backends by default are:  
+> The available backends by default are:
 >
 > * `:console` — logs messages to the console (enabled by default)
-> 
+>
 > Any developer can create their own `Logger` backend. Since `Logger` is an event manager powered by `:gen_event`, writing a new backend is a matter of creating an event handler, as described in the `:gen_event` documentation.
 >
 > The initial backends are loaded via the `:backends` configuration, which must be set before the `:logger` application is started.
@@ -38,7 +38,7 @@ Turns out, it was not too hard to accomplish.
 
 We decided to use a custom `Logger.Backend` as an interface, so we could inject the desired functionality into _already existing projects_. Add a new logger backend to the existing project with `config :logger, backends: [Our.Fancy.Logger.Backend]`—and voilà—logs with telemetry attached are now being sent to _Elastic_.
 
-That’s how [`Gelato`](https://hexdocs.pm/gelato/) library appeared. I know severe thoughtful true developers like libraries to be named in less esoteric way, but I am not a true developer by any mean. Bear with me. Although, _gelato_ (which is ice-cream in Spanish btw,) is somewhat consonant to _elastic_.
+That’s how [`Gelato`](https://hexdocs.pm/gelato/) library appeared. I know severe thoughtful true developers like libraries to be named in less esoteric way, but I am not a true developer by any mean. Bear with me. Although, _gelato_ (which is ice-cream in Italian btw,) is somewhat consonant to _elastic_.
 
 The library is highly opinionated and it uses [_convention over configuration_](https://en.wikipedia.org/wiki/Convention_over_configuration) paradigm. It packs whatever one might need into a single _JSON_ and sends it to preconfigured _Elastic_ server via _HTTP_ request. It also attaches all the metadata it has an access to, like meaningful data retrieved with [`Process.info/1`](https://hexdocs.pm/elixir/master/Process.html?#info/1) etc.
 
@@ -47,7 +47,7 @@ To start using this library in the project, one should add the following to thei
 ```elixir
 config :gelato,
   uri: "http://127.0.0.1:9200", # Elastic API endoint
-  events: [:foo, :bar],         # attached telemetry events  
+  events: [:foo, :bar],         # attached telemetry events
   handler: :elastic             # or :console for tests
 
 config :logger,
