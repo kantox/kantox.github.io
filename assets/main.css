@@ -12,7 +12,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 400 16px/1.5 -apple-system, "ff-meta-web-pro", BlinkMacSystemFont, "Ubuntu", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #37424a;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
