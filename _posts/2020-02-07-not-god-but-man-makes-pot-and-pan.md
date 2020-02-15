@@ -64,6 +64,10 @@ Despite the existence of long-lived ‘transactional’ actions in our environme
 
 Also, there are some actions that cannot be rolled back (e. g. the actual money transfer.) We clearly mark them in the event log _and_ for each of such actions we introduce the ‘rollback’ object, that does the action that is mimicking the real life rollback (e. g. transfer the same amount backward for the contrived example above.)
 
+#### Dry Run
+
+Each and every internal transaction should be availbale in _dry-run_ mode. With all the external calls mocked and all the logs and notifications enabled. That way it’d be possible to apply _Chaos Testing_ in production, while testing new features _or_ debugging known issues with existing ones.
+
 #### Orchestration vs Choreography
 
 These two approaches are usually mentioned as mutually exclusive. We discovered it is not the case at all. One might encapsulate parts of the whole system according to [_SRP_](https://en.wikipedia.org/wiki/Single_responsibility_principle) into _orchestrated_ beasts, who play well in the event-driven choreography and vice versa.
